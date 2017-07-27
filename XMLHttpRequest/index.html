@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XMLHttpRequest</title>
+</head>
+<body>
+    <p style="color:brown; font-family: tahoma;" id="Message"></p>
+    <script>
+        if(window.XMLHttpRequest){
+            document.getElementById("Message").textContent = "Browser Support XMLHttpRequest";
+            var xhr = new XMLHttpRequest();
+            alert("xhr.status: " + xhr.status);
+            alert("xhr.readyState: " + xhr.readyState);
+            alert("XMLHttpRequest.DONE: " + XMLHttpRequest.DONE);
+        }else{
+            document.getElementById("Message").textContent = "Browser Don't Support XMLHttpRequest";
+        }
+    </script>
+</body>
+</html>
