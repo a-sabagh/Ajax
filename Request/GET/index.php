@@ -19,15 +19,13 @@
                     xhr.open('GET', 'file.txt');
                     xhr.send();
                     xhr.onreadystatechange = function () {
-                        if (xhr.readyState = XMLHttpRequest.DONE) {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
                             if (xhr.status === 200) {
                                 document.getElementById("content").textContent = xhr.responseText;
                             } else {
                                 alert("ConnectionFail -> xhr.status: " + xhr.status);
                             }//xhr.status
-                        } else {
-                            alert("ConnectionFail -> xhr.readyState: " + xhr.readyState);
-                        }//XMLHttpRequest.DONE
+                        }//readystate done
                     }//onreadystatechange
                 }//window.XMLHttpRequest
             }//click
